@@ -1,0 +1,137 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Header Styles (Flexbox for Navigation) */
+header {
+  background-color: #f0f0f0;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between; /* Distributes space evenly */
+  align-items: center; /* Vertically centers items */
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+header nav ul li {
+  margin-left: 1rem;
+}
+
+/* Hero Section Styles */
+.hero {
+  background-color: #e0e0e0;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-button {
+  background-color: #007bff;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  display: inline-block; /* Makes it easier to control width/height */
+  margin-top: 1rem;
+}
+
+/* Grid Section Styles (Grid Layout) */
+.grid-section {
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive Grid */
+  gap: 1rem;
+}
+
+.grid-item {
+  background-color: #fafafa;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Flex Section Styles (Flexbox Layout) */
+.flex-section {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next line */
+  justify-content: space-around; /* Distributes space around items */
+  gap: 1rem;
+}
+
+.flex-item {
+  background-color: #f5f5f5;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  flex-basis: 300px; /* Initial width, before wrapping */
+  flex-grow: 1;      /* Allow to grow to fill available space */
+}
+
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+
+/* Media Queries for Responsiveness */
+
+/* Small Screens (Mobile) */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column; /* Stack header elements vertically */
+    text-align: center;
+  }
+
+  header nav ul {
+    flex-direction: column; /* Stack nav items vertically */
+    align-items: center; /* Center nav items */
+  }
+
+  header nav ul li {
+    margin: 0.5rem 0;
+  }
+
+  .flex-section {
+    flex-direction: column; /* Stack flex items vertically on small screens */
+    align-items: center; /* Center flex items */
+  }
+}
+
+/* Medium Screens (Tablets) */
+@media (min-width: 601px) and (max-width: 992px) {
+  /* Adjustments for tablets can be added here if needed. */
+  /* For example, you might want to change the number of grid columns. */
+  .grid-section {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Slightly smaller minmax */
+  }
+}
+
+/* Large Screens (Desktops) - No changes needed, defaults are good */
+@media (min-width: 993px) {
+  /*  You can add specific styles for larger screens here if desired */
+}
